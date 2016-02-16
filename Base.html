@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Случайность</title>
+    <style>
+	html{ background: url(stars.jpg); no-repeat; background-size: 100%;}
+	* { padding: 0; margin: 20; }
+	canvas { background: #000; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="750" height="580" style='border:5px solid yellow'></canvas>
+
+<script src="Boll.js"></script>
+<script>
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+	random();
+}
+setInterval(draw, 10);
+</script>
+</body>
+</html>
