@@ -36,7 +36,7 @@ function random () {
 	if(j==1){drawRect(A, x, y, ballRadius);}else{drawBall(A, x, y, ballRadius);}
 
     if(x+dx>canvas.width-ballRadius||x+dx<ballRadius){dx=-dx*r;}
-	if (y+dy<ballRadius||y+dy>canvas.height){dy = -dy*r;}
+	if (y+dy<ballRadius||y+dy>canvas.height-ballRadius){dy = -dy*r;}
 
 	if (Math.random()<0.04) {
 	A[0]=Math.round(Math.random()*255);
@@ -51,6 +51,6 @@ function random () {
 	if(dy>13){dy--;}else if(dy<-13){dy++;}
 	
 	x+=dx;y+=dy;
-	dx+=r-Math.random();dy+=r-Math.random()
+	dx+=r-Math.random();dy+=r-Math.random();
 	ballRadius+=r-Math.random();
 }
